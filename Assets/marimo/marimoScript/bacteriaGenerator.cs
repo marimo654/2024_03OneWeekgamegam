@@ -5,6 +5,7 @@ using UnityEngine;
 public class bacteriaGenerator : MonoBehaviour
 {
     public GameObject bacteriaPrefab;
+    GameObject alcohol;
     public float span = 0.5f;
     public float delta = 0;
 
@@ -32,5 +33,16 @@ public class bacteriaGenerator : MonoBehaviour
 
             this.delta = 0; //経過時間リセット
         }
+
+        /*if (Input.GetKeyDown(KeyCode.K))
+        {
+            Vector3 pos = GetComponent<alcoholScript>().alcoholPosition;
+            float alx = pos.x;
+            float aly = pos.y;
+            if (alx*alx + aly*aly > 16)
+            {
+                if()
+            }
+        }*/
     }
 }
