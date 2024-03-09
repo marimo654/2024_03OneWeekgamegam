@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: cdb48f7ed5856b842a5e35382efab696
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - item: {instanceID: 0}
+  - capsilePrefab: {fileID: 5875100395418716547, guid: b42698a728373a641987ee7487a699d5, type: 3}
+  - rokeranPrefab: {fileID: 2395445396089935390, guid: 9f1ba3322d173f047bd423c15edc06ce, type: 3}
+  - eiyouPrefab: {fileID: 8981026297359641763, guid: 61d05d3e04791da42aad8af5f9ca51de, type: 3}
+  - sizukuPrefab: {fileID: 6723425221900905703, guid: d19aea9b96f42484aa69343b8f249cab, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
