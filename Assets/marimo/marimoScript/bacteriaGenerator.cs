@@ -1,48 +1,49 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class bacteriaGenerator : MonoBehaviour
 {
-    public GameObject bacteriaPrefab;
-    GameObject alcohol;
-    public float span = 0.5f;
-    public float delta = 0;
-
+    [SerializeField] GameObject bacteriaPrefab;
+    [SerializeField] float span = 1.0f;
+    [SerializeField] float delta = 0;
+    SaikinCounterScript countScript;
+    [SerializeField] int saikinLimit;
     // Start is called before the first frame update
     void Start()
     {
-        
+        countScript = GameObject.FindWithTag("saikinCounter").GetComponent<SaikinCounterScript>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        this.delta += Time.deltaTime;   //経過時間deltaをフレーム毎に大きくしていく
-        if(this.delta > this.span)  //deltaがspanより大きくなったら
+        delta += Time.deltaTime;   //経過時間deltaをフレーム毎に大きくしていく
+        if (delta > span)  //deltaがspanより大きくなったら
         {
-            float x = Random.Range(-4f, 4f);
-            float y = Random.Range(-4f, 4f);
-            float z = Random.Range(-4f, 4f);
-            while(x*x + y*y > 16){
-                x = Random.Range(-4f, 4f);
-                y = Random.Range(-4f, 4f);
-                z = Random.Range(-4f, 4f);
-            }
-            Instantiate(bacteriaPrefab, new Vector3(x,y,z), bacteriaPrefab.transform.rotation);
-
-            this.delta = 0; //経過時間リセット
-        }
-
-        /*if (Input.GetKeyDown(KeyCode.K))
-        {
-            Vector3 pos = GetComponent<alcoholScript>().alcoholPosition;
-            float alx = pos.x;
-            float aly = pos.y;
-            if (alx*alx + aly*aly > 16)
+            if (countScript.saikinCount <= saikinLimit)
             {
-                if()
+                float x = Random.Range(-4f, 4f);
+                float y = Random.Range(-4f, 4f);
+                float z = Random.Range(-4f, 4f);
+                while (x * x + y * y > 16)
+                {
+                    x = Random.Range(-4f, 4f);
+                    y = Random.Range(-4f, 4f);
+                    z = Random.Range(-4f, 4f);
+                }
+
+                Instantiate(bacteriaPrefab, new Vector3(x, y, z), bacteriaPrefab.transform.rotation);
+                countScript.saikinCount += 1;
+
+                delta = 0; //経過時間リセット
             }
-        }*/
+        }
+    }
+
+    void OnDestroy()
+    {
+        countScript.saikinCount -= 1;
     }
 }
