@@ -37,7 +37,7 @@ public class alcoholScript : MonoBehaviour
 
     void Update()
     {
-        if (Input.anyKeyDown)
+        if (Input.GetKeyDown(KeyCode.Return))
         {
             DestroyCollidedObjects();
             Debug.Log("marimodayo");
