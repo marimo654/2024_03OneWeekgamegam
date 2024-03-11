@@ -21,10 +21,12 @@ namespace nuuspace
         [SerializeField] float rateOfTempertureDecrease;
         float remainingTime;
         float temperaturePercentage;
+        SaikinCounterScript saikinCounter;
         void Start()
         {
             remainingTime = gameOverTime;
             temperaturePercentage = defaultTemperaturePercentage;
+            saikinCounter = GameObject.FindWithTag("saikinCounter").GetComponent<SaikinCounterScript>();
         }
 
         void Update()
@@ -37,7 +39,7 @@ namespace nuuspace
             UpdateTimerDisplay(timerRatio);
             //温度計の表示温度を更新
             UpdateThermometerDisplay(temperaturePercentage);
-            if (remainingTime < 0f)
+            if (remainingTime < 0f || saikinCounter.saikinCount == 0)
             {
                 //ゲームオーバー処理を呼び出す
                 GameOver();

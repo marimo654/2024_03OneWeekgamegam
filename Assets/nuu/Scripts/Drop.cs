@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace nuuspace
 {
-    public class saikinItemScript : MonoBehaviour
+    public class Drop : BacteriaItemScript
     {
         // Start is called before the first frame update
         void Start()
@@ -16,6 +16,10 @@ namespace nuuspace
         void Update()
         {
 
+        }
+        public override void GetItem()
+        {
+            base.GetItem();
         }
     }
 }

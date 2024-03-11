@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace nuuspace
 {
-    public class bacteriaGenerator : MonoBehaviour
+    public class BacteriaGenerator : MonoBehaviour
     {
         [SerializeField] GameObject bacteriaPrefab;
         [SerializeField] float span = 1.0f;
@@ -15,6 +15,7 @@ namespace nuuspace
         // Start is called before the first frame update
         void Start()
         {
+            delta = 0f;
             countScript = GameObject.FindWithTag("saikinCounter").GetComponent<SaikinCounterScript>();
         }
 
@@ -24,7 +25,7 @@ namespace nuuspace
             delta += Time.deltaTime;   //経過時間deltaをフレーム毎に大きくしていく
             if (delta > span)  //deltaがspanより大きくなったら
             {
-                if (countScript.saikinCount <= saikinLimit)
+                if (countScript.saikinCount < saikinLimit)
                 {
                     float x = Random.Range(-4f, 4f);
                     float y = Random.Range(-4f, 4f);
@@ -38,9 +39,8 @@ namespace nuuspace
 
                     Instantiate(bacteriaPrefab, new Vector3(x, y, z), bacteriaPrefab.transform.rotation);
                     countScript.saikinCount += 1;
-
-                    delta = 0; //経過時間リセット
                 }
+                delta = 0; //経過時間リセット
             }
         }
 
