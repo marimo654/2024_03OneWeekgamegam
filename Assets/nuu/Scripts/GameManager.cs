@@ -12,15 +12,17 @@ public class GameManager : MonoBehaviour
     [SerializeField] Image rightThermometer;
     [SerializeField] Image leftThermometer;
     [Header("デフォルトの温度計の温度(割合)")]
-    [SerializeField] float temperaturePercentage;
+    [SerializeField] float defaultTemperaturePercentage;
     [Header("温度の上昇率(0~1の小数)")]
     [SerializeField] float rateOfTempertureIncrease;
     [Header("温度の減少率(0~1の小数)")]
     [SerializeField] float rateOfTempertureDecrease;
     float remainingTime;
+    float temperaturePercentage;
     void Start()
     {
         remainingTime = gameOverTime;
+        temperaturePercentage = defaultTemperaturePercentage;
     }
 
     void Update()
@@ -31,7 +33,8 @@ public class GameManager : MonoBehaviour
         float timerRatio = remainingTime / gameOverTime;
         //タイマーの表示更新
         UpdateTimerDisplay(timerRatio);
-
+        //温度計の表示温度を更新
+        UpdateThermometerDisplay(temperaturePercentage);
         if (remainingTime < 0f)
         {
             //ゲームオーバー処理を呼び出す
