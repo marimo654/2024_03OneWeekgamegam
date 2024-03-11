@@ -549,7 +549,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetTag: saikin
-  saikinCount: 0
+  saikinCount: 1
 --- !u!1 &1403156765
 GameObject:
   m_ObjectHideFlags: 0
@@ -666,6 +666,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetTag: saikin
+  kapuseruDuration: 0
 --- !u!50 &1403156770
 Rigidbody2D:
   serializedVersion: 4
@@ -1082,6 +1083,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetTag: saikin
+  kapuseruDuration: 5
 --- !u!1 &1879351229
 GameObject:
   m_ObjectHideFlags: 0
@@ -1235,7 +1237,6 @@ MonoBehaviour:
   sizukuPrefab: {fileID: 6723425221900905703, guid: d19aea9b96f42484aa69343b8f249cab, type: 3}
   span: 10
   delta: 0
-  kapuseruDuration: 0
 --- !u!212 &825778948572937141
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1276,7 +1277,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 1e890f3ca7aa30541bad1f54cd42d605, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
