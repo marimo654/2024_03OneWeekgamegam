@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4520471677952957531}
   - component: {fileID: 5459891047043979633}
+  - component: {fileID: 2270626917469118256}
   m_Layer: 0
   m_Name: sizukuPrefab
-  m_TagString: Untagged
+  m_TagString: sizukuPrefab
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -73,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: b633c83f2ef58a74a90aa910e2ab6b56, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a47908ac183e7fa4a80a912f4d561c80, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -84,3 +85,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!70 &2270626917469118256
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6723425221900905703}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.03}
+  m_Size: {x: 1.32, y: 1.72}
+  m_Direction: 0
