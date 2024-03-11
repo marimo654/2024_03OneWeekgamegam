@@ -12,7 +12,6 @@ public class alcoholScript : MonoBehaviour
         if (other.gameObject.CompareTag(targetTag))
         {
             collidedObjects.Add(other.gameObject);
-            
         }
     }
 
@@ -24,7 +23,7 @@ public class alcoholScript : MonoBehaviour
         }
     }
 
-    // Kボタンが押されたときに呼び出す関数
+    // Enter(Return)が押されたときに呼び出す関数
     private void DestroyCollidedObjects()
     {
         while(collidedObjects.Count > 0)
@@ -40,7 +39,6 @@ public class alcoholScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Return))
         {
             DestroyCollidedObjects();
-            Debug.Log("marimodayo");
         }   
     }
 }

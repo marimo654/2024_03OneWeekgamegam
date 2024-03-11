@@ -7,6 +7,10 @@ TagManager:
   - ka-soru_alcohol
   - saikin
   - saikinCounter
+  - kapuseruPrefab
+  - rokeranPrefab
+  - eiyouPrefab
+  - sizukuPrefab
   layers:
   - Default
   - TransparentFX
