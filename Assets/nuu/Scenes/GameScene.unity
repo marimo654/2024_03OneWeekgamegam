@@ -123,7 +123,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &82781340
+--- !u!1 &299827615
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -131,263 +131,50 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 82781342}
-  - component: {fileID: 82781341}
-  - component: {fileID: 82781344}
-  - component: {fileID: 82781343}
-  m_Layer: 6
-  m_Name: AlcoholCursor
+  - component: {fileID: 299827617}
+  - component: {fileID: 299827616}
+  m_Layer: 0
+  m_Name: GameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &82781341
+--- !u!114 &299827616
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 82781340}
+  m_GameObject: {fileID: 299827615}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 424b6720ff5999446843ba414e58a907, type: 3}
+  m_Script: {fileID: 11500000, guid: 2ff72be2254a16243a4d1ec05d9d2cb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_CursorMode: 0
-  m_CursorGraphic: {fileID: 1275477996}
-  m_CursorTransform: {fileID: 1275477995}
-  m_CursorSpeed: 400
-  m_ScrollSpeed: 45
-  m_StickAction:
-    m_UseReference: 0
-    m_Action:
-      m_Name: Stick
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: e4527abc-acb0-46cb-a6d2-28cb8cbbdf72
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings:
-      - m_Name: 2D Vector
-        m_Id: 95db86f1-f403-4490-b511-7ab321636095
-        m_Path: 2DVector
-        m_Interactions: 
-        m_Processors: 
-        m_Groups: 
-        m_Action: Stick
-        m_Flags: 4
-      - m_Name: up
-        m_Id: 311bf625-3f6b-44fd-8a50-83e70875058a
-        m_Path: <Keyboard>/#(W)
-        m_Interactions: 
-        m_Processors: 
-        m_Groups: 
-        m_Action: Stick
-        m_Flags: 8
-      - m_Name: down
-        m_Id: 615dc745-a245-4feb-980d-3ff9e90df6e3
-        m_Path: <Keyboard>/#(S)
-        m_Interactions: 
-        m_Processors: 
-        m_Groups: 
-        m_Action: Stick
-        m_Flags: 8
-      - m_Name: left
-        m_Id: ff3f654b-277b-4329-86e9-94941e2fbd33
-        m_Path: <Keyboard>/#(A)
-        m_Interactions: 
-        m_Processors: 
-        m_Groups: 
-        m_Action: Stick
-        m_Flags: 8
-      - m_Name: right
-        m_Id: d63b9366-7d3b-44f7-9bb6-2dd2d5343cb0
-        m_Path: <Keyboard>/#(D)
-        m_Interactions: 
-        m_Processors: 
-        m_Groups: 
-        m_Action: Stick
-        m_Flags: 8
-      m_Flags: 0
-    m_Reference: {fileID: 0}
-  m_LeftButtonAction:
-    m_UseReference: 0
-    m_Action:
-      m_Name: Left Button
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: 26017bb5-3e05-4946-b9cf-d431a97995ba
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings:
-      - m_Name: 
-        m_Id: ff342af7-561a-4b62-9ff7-8e3f9b34d000
-        m_Path: <Keyboard>/space
-        m_Interactions: 
-        m_Processors: 
-        m_Groups: 
-        m_Action: Left Button
-        m_Flags: 0
-      m_Flags: 0
-    m_Reference: {fileID: 0}
-  m_MiddleButtonAction:
-    m_UseReference: 0
-    m_Action:
-      m_Name: Middle Button
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: 3536a01b-2de0-473b-9086-3f524f9b5c66
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 0}
-  m_RightButtonAction:
-    m_UseReference: 0
-    m_Action:
-      m_Name: Right Button
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: 68b5cf1d-d416-4517-90ac-c3a773154e00
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 0}
-  m_ForwardButtonAction:
-    m_UseReference: 0
-    m_Action:
-      m_Name: Forward Button
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: 21720926-ff81-48f8-b866-eb35f2194701
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 0}
-  m_BackButtonAction:
-    m_UseReference: 0
-    m_Action:
-      m_Name: Back Button
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: 3a6e4f00-685f-4acb-8cd9-348b97e99c6c
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 0}
-  m_ScrollWheelAction:
-    m_UseReference: 0
-    m_Action:
-      m_Name: Scroll Wheel
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: bd6e837c-ef4e-48f2-b27f-4d67155eef7c
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 0}
---- !u!4 &82781342
+  gameOverTime: 100000
+  timerCircle: {fileID: 341564395}
+  rightThermometer: {fileID: 894711133}
+  leftThermometer: {fileID: 719353910}
+  defaultTemperaturePercentage: 0.5
+  rateOfTempertureIncrease: 0.1
+  rateOfTempertureDecrease: 0.1
+  bacteriaCounter: 1
+  cursorSpeed: 8
+--- !u!4 &299827617
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 82781340}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -260.80093, y: 10.389474, z: -4682.932}
-  m_LocalScale: {x: 51.330708, y: 51.330708, z: 51.330708}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1275477995}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &82781343
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 82781340}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 1.5
---- !u!50 &82781344
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 82781340}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!1 &273561843
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 273561845}
-  - component: {fileID: 273561844}
-  m_Layer: 0
-  m_Name: saikinCounter
-  m_TagString: saikinCounter
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &273561844
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 273561843}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c77bddcc072fdf246b9abfa026e303d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetTag: saikin
-  saikinCount: 1
---- !u!4 &273561845
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 273561843}
+  m_GameObject: {fileID: 299827615}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.9020863, y: -2.8171594, z: -1.1128346}
+  m_LocalPosition: {x: -0.9203744, y: -0.27410233, z: 1.0296149}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &341564393
 GameObject:
@@ -552,6 +339,8 @@ GameObject:
   - component: {fileID: 457182516}
   - component: {fileID: 457182517}
   - component: {fileID: 457182518}
+  - component: {fileID: 457182519}
+  - component: {fileID: 457182520}
   m_Layer: 6
   m_Name: bacteria Cursor image
   m_TagString: Untagged
@@ -567,17 +356,16 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 457182515}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -4682.932}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2071326609}
+  m_Children: []
   m_Father: {fileID: 1827434349}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 160, y: 257}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -297, y: 2e-15}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &457182517
@@ -618,6 +406,39 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!50 &457182519
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 457182515}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &457182520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 457182515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 224c7d07ca10bda4889022b7db291b06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &586880747
 GameObject:
   m_ObjectHideFlags: 0
@@ -955,7 +776,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &719353908
 GameObject:
@@ -1223,7 +1044,6 @@ GameObject:
   - component: {fileID: 1141383134}
   - component: {fileID: 1141383133}
   - component: {fileID: 1141383132}
-  - component: {fileID: 1141383135}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1297,25 +1117,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1141383135
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1141383131}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ff72be2254a16243a4d1ec05d9d2cb7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameOverTime: 30
-  timerCircle: {fileID: 341564395}
-  rightThermometer: {fileID: 894711133}
-  leftThermometer: {fileID: 719353910}
-  defaultTemperaturePercentage: 0.5
-  rateOfTempertureIncrease: 0.1
-  rateOfTempertureDecrease: 0.1
 --- !u!1 &1275477994
 GameObject:
   m_ObjectHideFlags: 0
@@ -1327,6 +1128,9 @@ GameObject:
   - component: {fileID: 1275477995}
   - component: {fileID: 1275477997}
   - component: {fileID: 1275477996}
+  - component: {fileID: 1275477998}
+  - component: {fileID: 1275478000}
+  - component: {fileID: 1275477999}
   m_Layer: 6
   m_Name: alcohol Cursor image
   m_TagString: Untagged
@@ -1342,17 +1146,16 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1275477994}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -4591.702}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 82781342}
+  m_Children: []
   m_Father: {fileID: 1827434349}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 750, y: 257}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 299, y: -0}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1275477996
@@ -1393,6 +1196,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1275477994}
   m_CullTransparentMesh: 1
+--- !u!114 &1275477998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1275477994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c6d8f53e68849449907c4fbbfe1d322, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!58 &1275477999
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1275477994}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
+--- !u!50 &1275478000
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1275477994}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1625669675
 GameObject:
   m_ObjectHideFlags: 0
@@ -1734,7 +1586,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_TargetDisplay: 0
 --- !u!224 &1827434349
 RectTransform:
@@ -1758,187 +1610,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1 &2071326607
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2071326609}
-  - component: {fileID: 2071326608}
-  m_Layer: 6
-  m_Name: BacteriaCursor
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2071326608
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2071326607}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 424b6720ff5999446843ba414e58a907, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_CursorMode: 0
-  m_CursorGraphic: {fileID: 457182518}
-  m_CursorTransform: {fileID: 457182516}
-  m_CursorSpeed: 400
-  m_ScrollSpeed: 45
-  m_StickAction:
-    m_UseReference: 0
-    m_Action:
-      m_Name: Stick
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: e4527abc-acb0-46cb-a6d2-28cb8cbbdf72
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings:
-      - m_Name: 2D Vector
-        m_Id: 95db86f1-f403-4490-b511-7ab321636095
-        m_Path: 2DVector
-        m_Interactions: 
-        m_Processors: 
-        m_Groups: 
-        m_Action: Stick
-        m_Flags: 4
-      - m_Name: up
-        m_Id: 311bf625-3f6b-44fd-8a50-83e70875058a
-        m_Path: <Keyboard>/upArrow
-        m_Interactions: 
-        m_Processors: 
-        m_Groups: 
-        m_Action: Stick
-        m_Flags: 8
-      - m_Name: down
-        m_Id: 615dc745-a245-4feb-980d-3ff9e90df6e3
-        m_Path: <Keyboard>/downArrow
-        m_Interactions: 
-        m_Processors: 
-        m_Groups: 
-        m_Action: Stick
-        m_Flags: 8
-      - m_Name: left
-        m_Id: ff3f654b-277b-4329-86e9-94941e2fbd33
-        m_Path: <Keyboard>/leftArrow
-        m_Interactions: 
-        m_Processors: 
-        m_Groups: 
-        m_Action: Stick
-        m_Flags: 8
-      - m_Name: right
-        m_Id: d63b9366-7d3b-44f7-9bb6-2dd2d5343cb0
-        m_Path: <Keyboard>/rightArrow
-        m_Interactions: 
-        m_Processors: 
-        m_Groups: 
-        m_Action: Stick
-        m_Flags: 8
-      m_Flags: 0
-    m_Reference: {fileID: 0}
-  m_LeftButtonAction:
-    m_UseReference: 0
-    m_Action:
-      m_Name: Left Button
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: 26017bb5-3e05-4946-b9cf-d431a97995ba
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings:
-      - m_Name: 
-        m_Id: ff342af7-561a-4b62-9ff7-8e3f9b34d000
-        m_Path: <Keyboard>/enter
-        m_Interactions: 
-        m_Processors: 
-        m_Groups: 
-        m_Action: Left Button
-        m_Flags: 0
-      m_Flags: 0
-    m_Reference: {fileID: 0}
-  m_MiddleButtonAction:
-    m_UseReference: 0
-    m_Action:
-      m_Name: Middle Button
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: 3536a01b-2de0-473b-9086-3f524f9b5c66
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 0}
-  m_RightButtonAction:
-    m_UseReference: 0
-    m_Action:
-      m_Name: Right Button
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: 68b5cf1d-d416-4517-90ac-c3a773154e00
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 0}
-  m_ForwardButtonAction:
-    m_UseReference: 0
-    m_Action:
-      m_Name: Forward Button
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: 21720926-ff81-48f8-b866-eb35f2194701
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 0}
-  m_BackButtonAction:
-    m_UseReference: 0
-    m_Action:
-      m_Name: Back Button
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: 3a6e4f00-685f-4acb-8cd9-348b97e99c6c
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 0}
-  m_ScrollWheelAction:
-    m_UseReference: 0
-    m_Action:
-      m_Name: Scroll Wheel
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: bd6e837c-ef4e-48f2-b27f-4d67155eef7c
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 0}
---- !u!4 &2071326609
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2071326607}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 329.19907, y: 10.389474, z: -4682.932}
-  m_LocalScale: {x: 51.330708, y: 51.330708, z: 51.330708}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 457182516}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2088305832
 GameObject:
   m_ObjectHideFlags: 0
@@ -2157,6 +1828,10 @@ PrefabInstance:
     - target: {fileID: 1378723106108493817, guid: f1e002795c950a14c9f9b8a46837900d, type: 3}
       propertyPath: m_Name
       value: saikin
+      objectReference: {fileID: 0}
+    - target: {fileID: 1378723106108493817, guid: f1e002795c950a14c9f9b8a46837900d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1e002795c950a14c9f9b8a46837900d, type: 3}

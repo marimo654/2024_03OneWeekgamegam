@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 namespace nuuspace
@@ -10,13 +7,13 @@ namespace nuuspace
         [SerializeField] GameObject bacteriaPrefab;
         [SerializeField] float span = 1.0f;
         [SerializeField] float delta = 0;
-        SaikinCounterScript countScript;
+        GameManager gameManagerScript;
         [SerializeField] int saikinLimit;
         // Start is called before the first frame update
         void Start()
         {
             delta = 0f;
-            countScript = GameObject.FindWithTag("saikinCounter").GetComponent<SaikinCounterScript>();
+            gameManagerScript = GameObject.Find("GameManager").GetComponent<GameManager>();
         }
 
         // Update is called once per frame
@@ -25,7 +22,7 @@ namespace nuuspace
             delta += Time.deltaTime;   //経過時間deltaをフレーム毎に大きくしていく
             if (delta > span)  //deltaがspanより大きくなったら
             {
-                if (countScript.saikinCount < saikinLimit)
+                if (gameManagerScript.bacteriaCounter < saikinLimit)
                 {
                     float x = Random.Range(-4f, 4f);
                     float y = Random.Range(-4f, 4f);
@@ -38,7 +35,7 @@ namespace nuuspace
                     }
 
                     Instantiate(bacteriaPrefab, new Vector3(x, y, z), bacteriaPrefab.transform.rotation);
-                    countScript.saikinCount += 1;
+                    gameManagerScript.bacteriaCounter += 1;
                 }
                 delta = 0; //経過時間リセット
             }
@@ -46,7 +43,7 @@ namespace nuuspace
 
         void OnDestroy()
         {
-            countScript.saikinCount -= 1;
+            gameManagerScript.bacteriaCounter -= 1;
         }
     }
 }
