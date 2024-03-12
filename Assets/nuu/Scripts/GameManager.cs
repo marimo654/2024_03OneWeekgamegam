@@ -23,6 +23,8 @@ namespace nuuspace
         float temperaturePercentage;
         [Header("細菌の数を数える変数(int型)")]
         public int bacteriaCounter = 1;
+        [Header("カーソルの速度を管理する変数")]
+        public float cursorSpeed;
         void Start()
         {
             remainingTime = gameOverTime;
