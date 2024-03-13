@@ -19,6 +19,7 @@ namespace nuuspace
 
         public void OnButtonClicked()
         {
+            // ゲームのシーンを呼び出す
             SceneManager.LoadScene("GameScene");
         }
     }
