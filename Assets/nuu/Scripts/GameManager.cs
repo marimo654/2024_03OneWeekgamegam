@@ -28,8 +28,6 @@ namespace nuuspace
         GameObject bacteriaWinResult;
         GameObject alcoholWinResult;
         GameObject darkVeil;
-        AlocoholCursorControler alocoholCursorControler;
-        BacteriaCursorControler bacteriaCursorControler;
         public bool isGameRunning = true;
         void Start()
         {
@@ -38,8 +36,6 @@ namespace nuuspace
             bacteriaWinResult = GameObject.Find("bacteriaWinResult");
             alcoholWinResult = GameObject.Find("alcoholWinResult");
             darkVeil = GameObject.Find("darkVeil");
-            alocoholCursorControler = GameObject.Find("alcohol Cursor image").GetComponent<AlocoholCursorControler>();
-            bacteriaCursorControler = GameObject.Find("bacteria Cursor image").GetComponent<BacteriaCursorControler>();
         }
 
         void Update()

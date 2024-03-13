@@ -344,7 +344,7 @@ GameObject:
   - component: {fileID: 457182520}
   m_Layer: 6
   m_Name: bacteria Cursor image
-  m_TagString: Untagged
+  m_TagString: bacteriaCursor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1386,7 +1386,7 @@ GameObject:
   - component: {fileID: 1275477999}
   m_Layer: 6
   m_Name: alcohol Cursor image
-  m_TagString: Untagged
+  m_TagString: alcoholCursor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

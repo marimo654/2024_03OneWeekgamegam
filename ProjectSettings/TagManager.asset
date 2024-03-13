@@ -11,8 +11,7 @@ TagManager:
   - sizukuPrefab
   - kokinPrefab
   - hosiPrefab
-  - bacteriaCursor
-  - alcoholCursor
+ main
   layers:
   - Default
   - TransparentFX
@@ -47,6 +46,39 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: BackGround
+    uniqueID: 2688255787
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Schale
+    uniqueID: 2793819227
+    locked: 0
+  - name: Areas
+    uniqueID: 186316311
+    locked: 0
+  - name: Schale Line
+    uniqueID: 3097128055
+    locked: 0
+  - name: Bacterias
+    uniqueID: 3940664381
+    locked: 0
+  - name: Items
+    uniqueID: 2302501841
+    locked: 0
+  - name: UI
+    uniqueID: 1912874975
+    locked: 0
+  - name: Cursors
+    uniqueID: 2067982505
+    locked: 0
+  - name: Animation
+    uniqueID: 259231617
+    locked: 0
+  - name: Veil
+    uniqueID: 133237287
+    locked: 0
+  - name: Results
+    uniqueID: 3107252683
     locked: 0
