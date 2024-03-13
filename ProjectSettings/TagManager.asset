@@ -11,6 +11,8 @@ TagManager:
   - sizukuPrefab
   - kokinPrefab
   - hosiPrefab
+  - BacteriaCursor
+  - AlcoholCursor
   layers:
   - Default
   - TransparentFX
