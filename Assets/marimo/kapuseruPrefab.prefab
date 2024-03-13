@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1220541297471251353}
   - component: {fileID: 8110963575443397990}
   - component: {fileID: 6837905285007767212}
+  - component: {fileID: -3985043642298255749}
   m_Layer: 0
   m_Name: kapuseruPrefab
   m_TagString: kapuseruPrefab
@@ -101,3 +102,16 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1.64, y: 0.91}
   m_Direction: 1
+--- !u!114 &-3985043642298255749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5875100395418716547}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9003b0883acc6e1499f3ea03f8099a4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kapuseruDuration: 3
