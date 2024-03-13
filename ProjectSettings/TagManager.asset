@@ -11,6 +11,7 @@ TagManager:
   - rokeranPrefab
   - eiyouPrefab
   - sizukuPrefab
+  - kokinPrefab
   layers:
   - Default
   - TransparentFX
