@@ -7,7 +7,6 @@ namespace nuuspace
     {
         Transform alocoholCursorTransform;
         Animator sprayAnimation;
-        bool isCoroutineRunning;
         [Header("どれくらいカーソルからずらすか")]
         [SerializeField] Vector2 shift;
         [Header("消えるまでの時間の補正")]
