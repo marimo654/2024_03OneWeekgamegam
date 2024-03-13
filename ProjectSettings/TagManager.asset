@@ -8,10 +8,11 @@ TagManager:
   - saikin
   - saikinCounter
   - kapuseruPrefab
-  - rokeranPrefab
-  - eiyouPrefab
   - sizukuPrefab
   - kokinPrefab
+  - hosiPrefab
+  - bacteriaCursor
+  - alcoholCursor
   layers:
   - Default
   - TransparentFX
