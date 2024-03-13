@@ -40,7 +40,7 @@ namespace marimo
                 isRokeran = true;
                 Destroy(other.gameObject);
             }
-            else if (other.gameObject.CompareTag("eiyouPrefab"))
+            /*else if (other.gameObject.CompareTag("eiyouPrefab"))
             {
                 isEiyou = true;
                 Destroy(other.gameObject);
@@ -56,7 +56,7 @@ namespace marimo
                 isRokeran = false;
                 isEiyou = false;
                 isSizuku = false;
-            }
+            }*/
         }
 
         IEnumerator KapuseruFalseCoroutine()
