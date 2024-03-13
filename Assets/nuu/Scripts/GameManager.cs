@@ -1,6 +1,6 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using DG.Tweening;
 
 namespace nuuspace
 {
@@ -25,26 +25,40 @@ namespace nuuspace
         public int bacteriaCounter = 1;
         [Header("カーソルの速度を管理する変数")]
         public float cursorSpeed;
+        GameObject bacteriaWinResult;
+        GameObject alcoholWinResult;
+        GameObject darkVeil;
+        AlocoholCursorControler alocoholCursorControler;
+        BacteriaCursorControler bacteriaCursorControler;
+        public bool isGameRunning = true;
         void Start()
         {
             remainingTime = gameOverTime;
             temperaturePercentage = defaultTemperaturePercentage;
+            bacteriaWinResult = GameObject.Find("bacteriaWinResult");
+            alcoholWinResult = GameObject.Find("alcoholWinResult");
+            darkVeil = GameObject.Find("darkVeil");
+            alocoholCursorControler = GameObject.Find("alcohol Cursor image").GetComponent<AlocoholCursorControler>();
+            bacteriaCursorControler = GameObject.Find("bacteria Cursor image").GetComponent<BacteriaCursorControler>();
         }
 
         void Update()
         {
-            //残り時間を計算する式
-            remainingTime -= Time.deltaTime;
-            //表示角度を計算
-            float timerRatio = remainingTime / gameOverTime;
-            //タイマーの表示更新
-            UpdateTimerDisplay(timerRatio);
-            //温度計の表示温度を更新
-            UpdateThermometerDisplay(temperaturePercentage);
-            if (remainingTime < 0f || bacteriaCounter == 0)
+            if (isGameRunning)
             {
-                //ゲームオーバー処理を呼び出す
-                GameOver();
+                //残り時間を計算する式
+                remainingTime -= Time.deltaTime;
+                //表示角度を計算
+                float timerRatio = remainingTime / gameOverTime;
+                //タイマーの表示更新
+                UpdateTimerDisplay(timerRatio);
+                //温度計の表示温度を更新
+                UpdateThermometerDisplay(temperaturePercentage);
+                if (remainingTime < 0f || bacteriaCounter == 0)
+                {
+                    //ゲームオーバー処理を呼び出す
+                    GameOver();
+                }
             }
         }
 
@@ -64,8 +78,17 @@ namespace nuuspace
 
         void GameOver()
         {
-            //ゲームオーバーした後のシーンを呼び出す
-            SceneManager.LoadScene("GameOverScene");
+            isGameRunning = false;
+            if (remainingTime < 0f)
+            {
+                bacteriaCounter = 128;
+                bacteriaWinResult.transform.DOMoveY(0, 1.5f);
+            }
+            else
+            {
+                alcoholWinResult.transform.DOMoveY(0, 1.5f);
+            }
+            darkVeil.transform.position = Vector2.zero;
         }
 
         public void TemperatureIncrease()
