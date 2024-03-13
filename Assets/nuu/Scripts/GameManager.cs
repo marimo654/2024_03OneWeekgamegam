@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using UnityEngine.SceneManagement;
 
 namespace nuuspace
 {
@@ -40,6 +41,7 @@ namespace nuuspace
 
         void Update()
         {
+            //ゲームが動いているとき
             if (isGameRunning)
             {
                 //残り時間を計算する式
@@ -55,6 +57,13 @@ namespace nuuspace
                     //ゲームオーバー処理を呼び出す
                     GameOver();
                 }
+            }
+            //動かなくなったとき
+            else
+            {
+                if (Input.GetKeyDown(KeyCode.Escape))
+                    //ここでタイトルに戻る処理
+                    SceneManager.LoadScene("TitleScene");
             }
         }
 
@@ -77,11 +86,13 @@ namespace nuuspace
             isGameRunning = false;
             if (remainingTime < 0f)
             {
+                //時間切れの時の終了処理
                 bacteriaCounter = 128;
                 bacteriaWinResult.transform.DOMoveY(0, 1.5f);
             }
             else
             {
+                //時間切れ以外の終了処理
                 alcoholWinResult.transform.DOMoveY(0, 1.5f);
             }
             darkVeil.transform.position = Vector2.zero;

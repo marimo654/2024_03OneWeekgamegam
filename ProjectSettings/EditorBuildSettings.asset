@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/nuu/Scenes/GameScene.unity
     guid: f97734e31129e3146b2154a84959694c
+  - enabled: 1
+    path: Assets/nuu/Scenes/TitleScene.unity
+    guid: 57f189c623d668f41b7e17c0b668c909
   m_configObjects: {}

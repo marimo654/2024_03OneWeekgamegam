@@ -13,6 +13,8 @@ TagManager:
   - hosiPrefab
   - BacteriaCursor
   - AlcoholCursor
+  - bacteriaCursor
+  - alcoholCursor
   layers:
   - Default
   - TransparentFX
@@ -68,14 +70,14 @@ TagManager:
   - name: Items
     uniqueID: 2302501841
     locked: 0
+  - name: Animation
+    uniqueID: 259231617
+    locked: 0
   - name: UI
     uniqueID: 1912874975
     locked: 0
   - name: Cursors
     uniqueID: 2067982505
-    locked: 0
-  - name: Animation
-    uniqueID: 259231617
     locked: 0
   - name: Veil
     uniqueID: 133237287
