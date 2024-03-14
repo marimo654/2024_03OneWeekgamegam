@@ -38,7 +38,7 @@ namespace marimo
             {
                 kapuseruObjects.Add(other.gameObject);
             }
-            else if (other.gameObject.CompareTag("rokeranPrefab"))
+            else if (other.gameObject.CompareTag("hosiPrefab"))
             {
                 rokeranObjects.Add(other.gameObject);
             }
@@ -55,7 +55,7 @@ namespace marimo
             {
                 kapuseruObjects.Remove(other.gameObject);
             }
-            else if (other.gameObject.CompareTag("rokeranPrefab"))
+            else if (other.gameObject.CompareTag("hosiPrefab"))
             {
                 rokeranObjects.Remove(other.gameObject);
             }
@@ -74,7 +74,7 @@ namespace marimo
             {
                 if (kapuseruObjects.Count == 1)
                 {
-                    alcoholCollider.radius = 3.0f;
+                    alcoholCollider.radius = 1.5f;
 
                     if (isKapuseru == false)
                     {
@@ -109,7 +109,7 @@ namespace marimo
         IEnumerator KapuseruFalseCoroutine()
         {
             yield return new WaitForSeconds(kapuseruDuration);
-            alcoholCollider.radius = 1.5f;
+            alcoholCollider.radius = 0.75f;
             isKapuseru = false;
         }
 

@@ -101,7 +101,11 @@ MonoBehaviour:
   bacteriaPrefab: {fileID: 5223307056329276572}
   span: 1
   delta: 0
+  saikinAge: 0
   saikinLimit: 128
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!58 &298746429777304357
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -5,11 +5,14 @@ namespace marimo
 
     public class SaikinItemGenerator : MonoBehaviour
     {
+        private GameObject item;
         public GameObject eiyouPrefab;
         public GameObject sizukuPrefab;
         public GameObject hueiseiPrefab;
         public float sItemSpan = 10.0f;
         public float sItemDelta = 0;
+        [SerializeField] MarimoCounterScript marimoCounterScript;
+
         // Start is called before the first frame update
         void Start()
         {
@@ -24,30 +27,28 @@ namespace marimo
             {
                 float x = Random.Range(-4f, 4f);
                 float y = Random.Range(-4f, 4f);
-                float z = Random.Range(-4f, 4f);
                 while (x * x + y * y > 16)
                 {
                     x = Random.Range(-4f, 4f);
                     y = Random.Range(-4f, 4f);
-                    z = Random.Range(-4f, 4f);
                 }
 
                 int dice = Random.Range(1, 4);
                 if (dice <= 1)
                 {
-                    Instantiate(eiyouPrefab, new Vector3(x, y, z), Quaternion.identity);
+                    item = Instantiate(eiyouPrefab, new Vector2(x, y), Quaternion.identity);
                 }
                 else if (dice <= 2)
                 {
-                    Instantiate(sizukuPrefab, new Vector3(x, y, z), Quaternion.identity);
+                    item = Instantiate(sizukuPrefab, new Vector2(x, y), Quaternion.identity);
                 }
                 else
                 {
-                    Instantiate(hueiseiPrefab, new Vector3(x, y, z), Quaternion.identity);
-                    
+                    item = Instantiate(hueiseiPrefab, new Vector2(x, y), Quaternion.identity);
+                    marimoCounterScript.areaCount++;
+                    item.GetComponent<SpriteRenderer>().sortingOrder += marimoCounterScript.areaCount;
                 }
-                //item.transform.position = new Vector3(x, y, z);
-
+                Destroy(item, 10.0f);
                 this.sItemDelta = 0; //経過時間リセット
             }
         }
