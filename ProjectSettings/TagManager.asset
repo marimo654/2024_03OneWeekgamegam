@@ -16,6 +16,8 @@ TagManager:
   - bacteriaCursor
   - alcoholCursor
   - hueiseiPrefab
+  - downPrefab
+  - upPrefab
   layers:
   - Default
   - TransparentFX

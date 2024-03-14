@@ -9,6 +9,7 @@ namespace marimo
         public GameObject eiyouPrefab;
         public GameObject sizukuPrefab;
         public GameObject hueiseiPrefab;
+        public GameObject upPrefab;
         public float sItemSpan = 10.0f;
         public float sItemDelta = 0;
         [SerializeField] MarimoCounterScript marimoCounterScript;
@@ -33,14 +34,18 @@ namespace marimo
                     y = Random.Range(-4f, 4f);
                 }
 
-                int dice = Random.Range(1, 4);
+                int dice = Random.Range(1, 17);
                 if (dice <= 1)
                 {
                     item = Instantiate(eiyouPrefab, new Vector2(x, y), Quaternion.identity);
                 }
-                else if (dice <= 2)
+                else if (dice <= 6)
                 {
                     item = Instantiate(sizukuPrefab, new Vector2(x, y), Quaternion.identity);
+                }
+                else if (dice <= 11)
+                {
+                    item = Instantiate(upPrefab, new Vector2(x, y), Quaternion.identity);
                 }
                 else
                 {
