@@ -15,6 +15,7 @@ TagManager:
   - AlcoholCursor
   - bacteriaCursor
   - alcoholCursor
+  - hueiseiPrefab
   layers:
   - Default
   - TransparentFX
@@ -23,7 +24,7 @@ TagManager:
   - Water
   - UI
   - Mouse
-  - 
+  - kokin_eria
   - 
   - 
   - 
@@ -70,7 +71,10 @@ TagManager:
   - name: Items
     uniqueID: 2302501841
     locked: 0
-  - name: Animation
+  - name: Twinkle Animation
+    uniqueID: 2890239611
+    locked: 0
+  - name: Boon Animation
     uniqueID: 259231617
     locked: 0
   - name: UI
