@@ -21,7 +21,8 @@ namespace nuuspace
         [Header("温度の減少率(0~1の小数)")]
         [SerializeField] float rateOfTempertureDecrease;
         float remainingTime;
-        float temperaturePercentage;
+        [Header("現在の温度(割合)")]
+        public float temperaturePercentage;
         [Header("細菌の数を数える変数(int型)")]
         public int bacteriaCounter = 1;
         [Header("カーソルの速度を管理する変数")]
