@@ -8,8 +8,8 @@ namespace marimo
         public GameObject eiyouPrefab;
         public GameObject sizukuPrefab;
         public GameObject hueiseiPrefab;
-        public float span = 10.0f;
-        public float delta = 0;
+        public float sItemSpan = 10.0f;
+        public float sItemDelta = 0;
         // Start is called before the first frame update
         void Start()
         {
@@ -19,8 +19,8 @@ namespace marimo
         // Update is called once per frame
         void Update()
         {
-            this.delta += Time.deltaTime;   //経過時間deltaをフレーム毎に大きくしていく
-            if (this.delta > this.span)  //deltaがspanより大きくなったら
+            this.sItemDelta += Time.deltaTime;   //経過時間deltaをフレーム毎に大きくしていく
+            if (this.sItemDelta > this.sItemSpan)  //deltaがspanより大きくなったら
             {
                 float x = Random.Range(-4f, 4f);
                 float y = Random.Range(-4f, 4f);
@@ -48,7 +48,7 @@ namespace marimo
                 }
                 //item.transform.position = new Vector3(x, y, z);
 
-                this.delta = 0; //経過時間リセット
+                this.sItemDelta = 0; //経過時間リセット
             }
         }
     }
