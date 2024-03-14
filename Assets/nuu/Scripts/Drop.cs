@@ -1,25 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace nuuspace
 {
-    public class Drop : BacteriaItemScript
+    public class Drop : BacteriaItemGetScript
     {
-        // Start is called before the first frame update
-        void Start()
+        protected override void OnDestroy()
         {
-
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
-        public override void GetItem()
-        {
-            base.GetItem();
             
         }
     }
