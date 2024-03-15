@@ -1,4 +1,5 @@
 using UnityEngine;
+using marimo;
 
 namespace nuuspace
 {
@@ -35,7 +36,7 @@ namespace nuuspace
                             y = Random.Range(-4f, 4f);
                         }
 
-                        BacteriaGenerator instantiatedBacteria = Instantiate(bacteriaPrefab, new Vector2(x, y), bacteriaPrefab.transform.rotation).GetComponent<BacteriaGenerator>();
+                        bacteriaGenerator instantiatedBacteria = Instantiate(bacteriaPrefab, new Vector2(x, y), bacteriaPrefab.transform.rotation).GetComponent<bacteriaGenerator>();
                         instantiatedBacteria.bacteriaManager = bacteriaManager;
                         instantiatedBacteria.gameManagerScript = gameManagerScript;
                         if (gameManagerScript.isNattoTime)

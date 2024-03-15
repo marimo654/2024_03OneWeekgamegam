@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using marimo;
 
 namespace nuuspace
 {
@@ -10,13 +11,13 @@ namespace nuuspace
         [SerializeField] Sprite bacteriaSprite;
         [SerializeField] float nattoDuration;
         // SpriteRenderer bacteriaSpriteRenderer;
-        public List<BacteriaGenerator> bacteriaGenerators;
+        public List<bacteriaGenerator> bacteriaGenerators;
         Coroutine nattoCoroutineState;
         GameManager gameManager;
         void Start()
         {
             // bacteriaSpriteRenderer = GameObject.FindWithTag("saikin").GetComponent<SpriteRenderer>();
-            bacteriaGenerators = new List<BacteriaGenerator>() { GameObject.FindWithTag("saikin").GetComponent<BacteriaGenerator>() };
+            bacteriaGenerators = new List<bacteriaGenerator>() { GameObject.FindWithTag("saikin").GetComponent<bacteriaGenerator>() };
             gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         }
         public void GetStar()
@@ -38,7 +39,7 @@ namespace nuuspace
 
         IEnumerator nattoCoroutine()
         {
-            foreach (BacteriaGenerator bacteriaGenerator in bacteriaGenerators)
+            foreach (bacteriaGenerator bacteriaGenerator in bacteriaGenerators)
             {
                 if (bacteriaGenerator != null)
                 {
@@ -47,7 +48,7 @@ namespace nuuspace
             }
             yield return new WaitForSeconds(nattoDuration);
             bacteriaGenerators.RemoveAll(b => b == null);
-            foreach (BacteriaGenerator bacteriaGenerator in bacteriaGenerators)
+            foreach (bacteriaGenerator bacteriaGenerator in bacteriaGenerators)
             {
                 if (bacteriaGenerator != null)
                 {
