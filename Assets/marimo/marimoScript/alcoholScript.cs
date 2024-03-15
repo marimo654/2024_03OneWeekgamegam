@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using nuuspace;
 
 
 namespace marimo
@@ -12,6 +13,7 @@ namespace marimo
         private List<GameObject> saikinObjects = new List<GameObject>();
         private List<GameObject> kapuseruObjects = new List<GameObject>();
         private List<GameObject> rokeranObjects = new List<GameObject>();
+        private List<GameObject> downObjects = new List<GameObject>();
         CircleCollider2D alcoholCollider;
         bool isKapuseru;
         bool isRokeran;
@@ -26,23 +28,30 @@ namespace marimo
         Vector3 startPointPosition;
         [SerializeField] RokeranScript rokeranScript;
         [SerializeField] Animator boonanime;
-        
+        [SerializeField] AudioClip bakuhatuon;
+        [SerializeField] AudioClip kapuseruSound;
+        [SerializeField] AudioClip hosiSound;
+        [SerializeField] AudioSource audioSource;
+        GameManager gameManager;
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if (other.gameObject.CompareTag(targetTag))
+            if (other.gameObject.CompareTag(targetTag)) //カーソルが細菌に当たったとき
             {
-                saikinObjects.Add(other.gameObject);
+                saikinObjects.Add(other.gameObject);    //当たっている細菌をsaikinObjekutsというリストに入れる
             }
-            else if (other.gameObject.CompareTag("kapuseruPrefab"))
+            else if (other.gameObject.CompareTag("kapuseruPrefab")) //カーソルがカプセルに当たったとき
             {
-                kapuseruObjects.Add(other.gameObject);
+                kapuseruObjects.Add(other.gameObject);  //当たっているカプセルをkapuseruObjekutsというリストに入れる
             }
-            else if (other.gameObject.CompareTag("hosiPrefab"))
+            else if (other.gameObject.CompareTag("hosiPrefab")) //カーソルが星(ロケラン)に当たったとき
             {
-                rokeranObjects.Add(other.gameObject);
+                rokeranObjects.Add(other.gameObject);   //当たっている星(ロケラン)をkapuseruObjekutsというリストに入れる
             }
-
+            else if (other.gameObject.CompareTag("downPrefab")) //カーソルが下矢印に当たったとき
+            {
+                downObjects.Add(other.gameObject);  //当たっている下矢印をdownObjekutsというリストに入れる
+            }
         }
 
         private void OnTriggerExit2D(Collider2D other)
@@ -59,22 +68,27 @@ namespace marimo
             {
                 rokeranObjects.Remove(other.gameObject);
             }
+            else if (other.gameObject.CompareTag("downPrefab"))
+            {
+                downObjects.Remove(other.gameObject);
+            }
         }
 
         // Enter(Return)が押されたときに呼び出す関数
         private void DestroyCollidedObjects()
         {
-            while (saikinObjects.Count > 0)
+            while (saikinObjects.Count > 0) //細菌をクリックしたときの処理
             {
                 GameObject obj = saikinObjects[0];
                 Destroy(obj);
                 saikinObjects.Remove(obj);
             }
-            while (kapuseruObjects.Count > 0)
+            while (kapuseruObjects.Count > 0)   //カプセルをクリックしたとき処理
             {
                 if (kapuseruObjects.Count == 1)
                 {
                     alcoholCollider.radius = 1.5f;
+                    audioSource.PlayOneShot(kapuseruSound);
 
                     if (isKapuseru == false)
                     {
@@ -92,8 +106,10 @@ namespace marimo
                 Destroy(obj);
                 kapuseruObjects.Remove(obj);
             }
-            while (rokeranObjects.Count > 0)
+            while (rokeranObjects.Count > 0)    //星をクリックしたときの処理
             {
+                audioSource.PlayOneShot(hosiSound);
+
                 if (rokeranObjects.Count == 1)
                 {
                     isRokeran = true;
@@ -103,6 +119,13 @@ namespace marimo
                 GameObject obj = rokeranObjects[0];
                 Destroy(obj);
                 rokeranObjects.Remove(obj);
+            }
+            while (downObjects.Count > 0)    //下矢印をクリックしたときの処理
+            {
+                gameManager.TemperatureDecrease();
+                GameObject obj = downObjects[0];
+                Destroy(obj);
+                downObjects.Remove(obj);
             }
         }
 
@@ -121,7 +144,7 @@ namespace marimo
             startPointPosition = startPoint.position;
             rokeran_hontai.SetActive(false);
             rokeran_sentan.SetActive(false);
-            
+            gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         }
         void Update()
         {
@@ -172,13 +195,14 @@ namespace marimo
                 isRokeran = false;
                 rokeran_sentan.transform.position = startPointPosition;
                 rokeran_sentan.transform.rotation = Quaternion.Euler(0, 0, 45);
-                
+
                 rokeranScript.Saikinboon();
                 rokeran_hontai.SetActive(false);
                 rokeran_sentan.SetActive(false);
 
                 boonanime.gameObject.transform.position = path[3];
                 boonanime.Play("BoonAnime");
+                audioSource.PlayOneShot(bakuhatuon);
             });
         }
 

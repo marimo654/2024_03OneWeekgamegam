@@ -10,6 +10,7 @@ namespace marimo
         public GameObject capsilePrefab;
         public GameObject rokeranPrefab;
         public GameObject kokinPrefab;
+        public GameObject downPrefab;
         public float aItemSpan = 10.0f;
         public float aItemDelta = 0;
         [SerializeField] MarimoCounterScript marimoCounterScript;
@@ -34,14 +35,18 @@ namespace marimo
                     y = Random.Range(-4f, 4f);
                 }
 
-                int dice = Random.Range(1, 4);
+                int dice = Random.Range(1, 17);
                 if (dice <= 1)
                 {
                     item = Instantiate(capsilePrefab, new Vector2(x, y), Quaternion.identity);
                 }
-                else if (dice <= 2)
+                else if (dice <= 6)
                 {
                     item = Instantiate(rokeranPrefab, new Vector2(x, y), Quaternion.identity);
+                }
+                else if (dice <= 11)
+                {
+                    item = Instantiate(downPrefab, new Vector2(x, y), Quaternion.identity);
                 }
                 else
                 {
