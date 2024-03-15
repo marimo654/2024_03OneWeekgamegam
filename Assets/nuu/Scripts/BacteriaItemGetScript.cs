@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace nuuspace
@@ -6,8 +5,7 @@ namespace nuuspace
     public class BacteriaItemGetScript : MonoBehaviour
     {
         bool isContacted;
-        // List<GameObject> collidedObjects = new List<GameObject>();
-        protected void GetItem()
+        void GetItem()
         {
             isContacted = false;
             Destroy(gameObject);
@@ -31,7 +29,6 @@ namespace nuuspace
             if (other.CompareTag("bacteriaCursor"))
             {
                 isContacted = true;
-                // collidedObjects.Add(gameObject);
             }
         }
 
@@ -40,7 +37,6 @@ namespace nuuspace
             if (other.CompareTag("bacteriaCursor"))
             {
                 isContacted = false;
-                // collidedObjects.Remove(gameObject);
             }
         }
     }

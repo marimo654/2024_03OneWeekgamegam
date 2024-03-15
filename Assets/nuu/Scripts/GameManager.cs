@@ -27,10 +27,13 @@ namespace nuuspace
         public int bacteriaCounter = 1;
         [Header("カーソルの速度を管理する変数")]
         public float cursorSpeed;
+        [Header("細菌の最大数")]
+        public int bacteriaLimit;
         GameObject bacteriaWinResult;
         GameObject alcoholWinResult;
         GameObject darkVeil;
         public bool isGameRunning = true;
+        public bool isNattoTime;
         void Start()
         {
             remainingTime = gameOverTime;

@@ -114,3 +114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b374323694598b14ea4b459981d5368f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bacteriaPrefab: {fileID: 1378723106108493817, guid: f1e002795c950a14c9f9b8a46837900d, type: 3}
+  instantBacteriaGenerateAmount: 0
+  nattoSprite: {fileID: 21300000, guid: 8051d2ea44a793647b6b7bc4ad064ea3, type: 3}
+  dropAudio: {fileID: 8300000, guid: c5765212b0827e844969601f515290b2, type: 3}

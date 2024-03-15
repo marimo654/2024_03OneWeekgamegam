@@ -1,10 +1,21 @@
-using nuuspace;
 using UnityEngine;
 
-public class Star : BacteriaItemGetScript
+namespace nuuspace
 {
-    protected override void OnDestroy()
+    public class Star : BacteriaItemGetScript
     {
-        base.OnDestroy();
+        AudioSource audioSource;
+        [SerializeField] AudioClip starAudio;
+        BacteriaManager bacteriaManager;
+        void Start()
+        {
+            bacteriaManager = GameObject.Find("BacteriaManager").GetComponent<BacteriaManager>();
+            audioSource = GameObject.Find("Main Camera").GetComponent<AudioSource>();
+        }
+        protected override void OnDestroy()
+        {
+            audioSource.PlayOneShot(starAudio);
+            bacteriaManager.GetStar();
+        }
     }
 }
