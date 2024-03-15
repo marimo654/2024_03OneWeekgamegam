@@ -5,6 +5,7 @@ namespace nuuspace
     public class BacteriaItemGetScript : MonoBehaviour
     {
         protected bool isContacted;
+        protected bool isClicked;
         void GetItem()
         {
             Destroy(gameObject);
@@ -19,6 +20,7 @@ namespace nuuspace
         {
             if (Input.GetKeyDown(KeyCode.Space) && isContacted == true)
             {
+                isClicked = true;
                 GetItem();
             }
         }
