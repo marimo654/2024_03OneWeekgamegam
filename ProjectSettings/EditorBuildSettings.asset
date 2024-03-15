@@ -5,16 +5,19 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/marimo/marimoScenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
+  - enabled: 0
     path: Assets/nuu/Scenes/GameOverScene.unity
     guid: 62c688e1a7e2ca74a9917f5edf106756
   - enabled: 1
+    path: Assets/Main/TitleScene.unity
+    guid: 1e10ca4d439705d41ab0fb4a6491284a
+  - enabled: 1
     path: Assets/Main/GameScene.unity
     guid: f97734e31129e3146b2154a84959694c
-  - enabled: 1
+  - enabled: 0
     path: Assets/nuu/Scenes/TitleScene.unity
     guid: 57f189c623d668f41b7e17c0b668c909
   m_configObjects: {}

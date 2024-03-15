@@ -115,6 +115,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bacteriaPrefab: {fileID: 0}
-  instantBacteriaGenerateAmount: 0
-  nattoSprite: {fileID: 0}
+  instantBacteriaGenerateAmount: 10
+  nattoSprite: {fileID: 21300000, guid: 8051d2ea44a793647b6b7bc4ad064ea3, type: 3}
   dropAudio: {fileID: 8300000, guid: 0a187ee0e5165f3449bc1a35ec6c8bbc, type: 3}
