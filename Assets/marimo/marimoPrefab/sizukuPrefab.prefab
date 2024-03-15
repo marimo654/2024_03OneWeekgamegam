@@ -117,4 +117,4 @@ MonoBehaviour:
   bacteriaPrefab: {fileID: 0}
   instantBacteriaGenerateAmount: 0
   nattoSprite: {fileID: 0}
-  dropAudio: {fileID: 0}
+  dropAudio: {fileID: 8300000, guid: 0a187ee0e5165f3449bc1a35ec6c8bbc, type: 3}
