@@ -4,10 +4,9 @@ namespace nuuspace
 {
     public class BacteriaItemGetScript : MonoBehaviour
     {
-        bool isContacted;
+        protected bool isContacted;
         void GetItem()
         {
-            isContacted = false;
             Destroy(gameObject);
         }
 
