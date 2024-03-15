@@ -14,8 +14,12 @@ namespace nuuspace
         }
         protected override void OnDestroy()
         {
-            audioSource.PlayOneShot(starAudio);
-            bacteriaManager.GetStar();
+            if (isContacted)
+            {
+                audioSource.PlayOneShot(starAudio);
+                bacteriaManager.GetStar();
+                isContacted = false;
+            }
         }
     }
 }
