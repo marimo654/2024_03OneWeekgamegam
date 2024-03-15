@@ -21,32 +21,36 @@ namespace nuuspace
         }
         protected override void OnDestroy()
         {
-            audioSource.PlayOneShot(dropAudio);
-            if (bacteriaPrefab != null)
+            if (isContacted && isClicked)
             {
-                for (int i = 0; i < instantBacteriaGenerateAmount; i++)
+                audioSource.PlayOneShot(dropAudio);
+                if (bacteriaPrefab != null)
                 {
-                    if (gameManagerScript.bacteriaCounter < gameManagerScript.bacteriaLimit)
+                    for (int i = 0; i < instantBacteriaGenerateAmount; i++)
                     {
-                        float x = Random.Range(-4f, 4f);
-                        float y = Random.Range(-4f, 4f);
-                        while (x * x + y * y > 16)
+                        if (gameManagerScript.bacteriaCounter < gameManagerScript.bacteriaLimit)
                         {
-                            x = Random.Range(-4f, 4f);
-                            y = Random.Range(-4f, 4f);
-                        }
+                            float x = Random.Range(-4f, 4f);
+                            float y = Random.Range(-4f, 4f);
+                            while (x * x + y * y > 16)
+                            {
+                                x = Random.Range(-4f, 4f);
+                                y = Random.Range(-4f, 4f);
+                            }
 
-                        bacteriaGenerator instantiatedBacteria = Instantiate(bacteriaPrefab, new Vector2(x, y), bacteriaPrefab.transform.rotation).GetComponent<bacteriaGenerator>();
-                        instantiatedBacteria.bacteriaManager = bacteriaManager;
-                        instantiatedBacteria.gameManagerScript = gameManagerScript;
-                        if (gameManagerScript.isNattoTime)
-                        {
-                            instantiatedBacteria.GetComponent<SpriteRenderer>().sprite = nattoSprite;
+                            bacteriaGenerator instantiatedBacteria = Instantiate(bacteriaPrefab, new Vector2(x, y), bacteriaPrefab.transform.rotation).GetComponent<bacteriaGenerator>();
+                            instantiatedBacteria.bacteriaManager = bacteriaManager;
+                            instantiatedBacteria.gameManagerScript = gameManagerScript;
+                            if (gameManagerScript.isNattoTime)
+                            {
+                                instantiatedBacteria.GetComponent<SpriteRenderer>().sprite = nattoSprite;
+                            }
+                            gameManagerScript.bacteriaCounter += 1;
+                            bacteriaManager.bacteriaGenerators.Add(instantiatedBacteria);
                         }
-                        gameManagerScript.bacteriaCounter += 1;
-                        bacteriaManager.bacteriaGenerators.Add(instantiatedBacteria);
                     }
                 }
+                isClicked = false;
             }
         }
     }
