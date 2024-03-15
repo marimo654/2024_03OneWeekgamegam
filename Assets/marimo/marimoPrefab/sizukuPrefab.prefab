@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4520471677952957531}
   - component: {fileID: 5459891047043979633}
   - component: {fileID: 2270626917469118256}
+  - component: {fileID: 7177329176389354638}
   m_Layer: 0
   m_Name: sizukuPrefab
   m_TagString: sizukuPrefab
@@ -101,3 +102,19 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0.03}
   m_Size: {x: 1.32, y: 1.72}
   m_Direction: 0
+--- !u!114 &7177329176389354638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6723425221900905703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b374323694598b14ea4b459981d5368f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bacteriaPrefab: {fileID: 0}
+  instantBacteriaGenerateAmount: 0
+  nattoSprite: {fileID: 0}
+  dropAudio: {fileID: 0}
