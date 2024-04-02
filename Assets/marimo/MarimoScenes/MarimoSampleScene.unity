@@ -1665,7 +1665,7 @@ GameObject:
   - component: {fileID: 1412366100}
   - component: {fileID: 1412366099}
   m_Layer: 0
-  m_Name: sya-re
+  m_Name: Sya-re
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2452,7 +2452,9 @@ MonoBehaviour:
   temperaturePercentage: 0
   bacteriaCounter: 1
   cursorSpeed: 8
+  bacteriaLimit: 0
   isGameRunning: 1
+  isNattoTime: 0
 --- !u!4 &1901247772
 Transform:
   m_ObjectHideFlags: 0
@@ -2845,14 +2847,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bacteriaPrefab: {fileID: 5223307056329276572, guid: 5cbdc7546764e1a48972174ad66b3145, type: 3}
-  span: 1
+  defaultSpan: 1
   delta: 0
   saikinAge: 0
-  saikinLimit: 128
   layerMask:
     serializedVersion: 2
     m_Bits: 128
-  gameManager: {fileID: 0}
+  gameManagerScript: {fileID: 0}
+  bacteriaManager: {fileID: 0}
+  bacteriaSpriteRenderer: {fileID: 0}
+  nattoSprite: {fileID: 0}
 --- !u!4 &4409974551170540608
 Transform:
   m_ObjectHideFlags: 0
