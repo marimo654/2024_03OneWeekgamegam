@@ -25,6 +25,8 @@ namespace marimo
         public SpriteRenderer bacteriaSpriteRenderer;
         [SerializeField] Sprite nattoSprite;
 
+        int killedBactesria;
+
         // Start is called before the first frame update
         void Start()
         {
@@ -44,6 +46,8 @@ namespace marimo
             bacteriaManager = GameObject.Find("BacteriaManager").GetComponent<BacteriaManager>();
 
             bacteriaSpriteRenderer = GetComponent<SpriteRenderer>();
+
+            killedBactesria = 0;
         }
 
         // Update is called once per frame
@@ -85,6 +89,7 @@ namespace marimo
         void OnDestroy()
         {
             gameManagerScript.bacteriaCounter -= 1;
+            killedBactesria += 1;   //殺した細菌をカウント
         }
     }
 }
